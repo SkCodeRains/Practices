@@ -1,0 +1,114 @@
+$color1 : #ff80ed,
+#065535,
+#133337,
+#ffc0cb,
+#008080,
+#ff0000,
+#00ffff,
+#ffa500,
+#ff7373,
+#0000ff,
+#40e0d0,
+#666666,
+#faebd7,
+#bada55,
+#003366,
+#ffff00,
+#ffb6c1,
+#c0c0c0,
+#800080,
+#800000,
+#7fffd4,
+#c39797,
+#20b2aa,
+#ffc3a0,
+#c0d6e4,
+#ff6666;
+
+$numerbOfBols: 16;
+$speed: 4;
+
+body {
+    background: url(5841c72197f50.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    .plate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: rgb(87, 226, 26);
+        /* background: radial-gradient(circle at 65% 15%, lighten(nth($color1, random(length($color1))), 1%) 1px, aqua 3%, darkblue 60%, lighten(nth($color1, random(length($color1))), 10%) 100%); */
+        background: linear-gradient(315deg, rgba(87, 226, 26, 0.4992121848739496) 8%, rgba(228, 176, 42, 0.5160189075630253) 35%, rgba(205, 33, 17, 0.5356267507002801) 52%, rgba(152, 102, 2, 0.4824054621848739) 71%, rgba(152, 2, 88, 0.4768032212885154) 92%);
+        /* background-color: rgba(255, 255, 255, 0.534); */
+        border-radius: 100%;
+        box-shadow: inset 0 5px 3px 0 rgb(255 255 255 / 50%), inset 0 -5px 3px 0 rgb(0 0 0 / 24%), inset 3px 0 2px 0 rgb(0 0 0 / 36%), inset -3px 0 2px 0 rgb(0 0 0 / 65%), inset 0 5px 46px 0 rgb(0 0 0 / 81%), 0 5px 13px 0 rgb(0 0 0 / 40%), inset 0 0 4px 3px rgb(255 255 255 / 89%), inset 0 8px 16px 4px rgb(0 0 0 / 27%);
+
+        /* Portrait */
+        @media screen and (orientation:portrait) {
+            width: 90vw;
+            height: 90vw;
+        }
+
+        /* Landscape */
+        @media screen and (orientation:landscape) {
+            width: 90vh;
+            height: 90vh;
+        }
+
+        .bols {
+            border: 0px solid red;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                content: "";
+                width: 3rem;
+                height: 3rem;
+                border-radius: 3rem;
+                position: absolute;
+                animation: topToBottomBottomToTop ease-in-out #{$speed}s infinite;
+            }
+
+            @for $i from 1 through $numerbOfBols {
+                &:nth-child(#{$i}) {
+                    rotate:#{($i) * 360/($numerbOfBols*2)}deg;
+
+                    &::before {
+                        animation-delay: #{$i/(($numerbOfBols/$speed)*2)}s; 
+                        background: radial-gradient(circle at 65% 15%, lighten(nth($color1, random(length($color1))), 100%) 1px, lighten(nth($color1, random(length($color1))), 10%) 3%, lighten(nth($color1, random(length($color1))), 10%) 60%, lighten(nth($color1, random(length($color1))), 10%) 100%);
+                        background-color: lighten(nth($color1, random(length($color1))), 10%);
+                    }
+                }
+            }
+        }
+
+        @keyframes topToBottomBottomToTop {
+            0% {
+                bottom: 2.5%;
+            }
+
+            50% {
+                bottom: 95%;
+            }
+
+            100% {
+                bottom: 2.5%;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-expression-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-beans-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-aop-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-jcl-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-context-support-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-context-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CodeRains/Downloads/spring-core-6.0.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

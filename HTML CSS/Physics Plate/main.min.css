@@ -1,0 +1,193 @@
+body {
+  background: url(5841c72197f50.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.container-fluid .plate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgb(87, 226, 26);
+  /* background: radial-gradient(circle at 65% 15%, lighten(nth($color1, random(length($color1))), 1%) 1px, aqua 3%, darkblue 60%, lighten(nth($color1, random(length($color1))), 10%) 100%); */
+  background: linear-gradient(315deg, rgba(87, 226, 26, 0.4992121849) 8%, rgba(228, 176, 42, 0.5160189076) 35%, rgba(205, 33, 17, 0.5356267507) 52%, rgba(152, 102, 2, 0.4824054622) 71%, rgba(152, 2, 88, 0.4768032213) 92%);
+  /* background-color: rgba(255, 255, 255, 0.534); */
+  border-radius: 100%;
+  box-shadow: inset 0 5px 3px 0 rgba(255, 255, 255, 0.5), inset 0 -5px 3px 0 rgba(0, 0, 0, 0.24), inset 3px 0 2px 0 rgba(0, 0, 0, 0.36), inset -3px 0 2px 0 rgba(0, 0, 0, 0.65), inset 0 5px 46px 0 rgba(0, 0, 0, 0.81), 0 5px 13px 0 rgba(0, 0, 0, 0.4), inset 0 0 4px 3px rgba(255, 255, 255, 0.89), inset 0 8px 16px 4px rgba(0, 0, 0, 0.27);
+  /* Portrait */
+  /* Landscape */
+}
+@media screen and (orientation: portrait) {
+  .container-fluid .plate {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+@media screen and (orientation: landscape) {
+  .container-fluid .plate {
+    width: 90vh;
+    height: 90vh;
+  }
+}
+.container-fluid .plate .bols {
+  border: 0px solid red;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid .plate .bols::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  position: absolute;
+  animation: topToBottomBottomToTop ease-in-out 4s infinite;
+}
+.container-fluid .plate .bols:nth-child(1) {
+  rotate: 11.25deg;
+}
+.container-fluid .plate .bols:nth-child(1)::before {
+  animation-delay: 0.125s;
+  background: radial-gradient(circle at 65% 15%, white 1px, white 3%, #098553 60%, #ffa6a6 100%);
+  background-color: #d6b7b7;
+}
+.container-fluid .plate .bols:nth-child(2) {
+  rotate: 22.5deg;
+}
+.container-fluid .plate .bols:nth-child(2)::before {
+  animation-delay: 0.25s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #ffb733 3%, #ff3333 60%, #ff9999 100%);
+  background-color: #098553;
+}
+.container-fluid .plate .bols:nth-child(3) {
+  rotate: 33.75deg;
+}
+.container-fluid .plate .bols:nth-child(3)::before {
+  animation-delay: 0.375s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #b30000 3%, #b30000 60%, #33ffff 100%);
+  background-color: #ffb3f4;
+}
+.container-fluid .plate .bols:nth-child(4) {
+  rotate: 45deg;
+}
+.container-fluid .plate .bols:nth-child(4)::before {
+  animation-delay: 0.5s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, #00b3b3 60%, #6ce7db 100%);
+  background-color: #cbe37f;
+}
+.container-fluid .plate .bols:nth-child(5) {
+  rotate: 56.25deg;
+}
+.container-fluid .plate .bols:nth-child(5)::before {
+  animation-delay: 0.625s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #cbe37f 3%, #cbe37f 60%, white 100%);
+  background-color: #ffb3f4;
+}
+.container-fluid .plate .bols:nth-child(6) {
+  rotate: 67.5deg;
+}
+.container-fluid .plate .bols:nth-child(6)::before {
+  animation-delay: 0.75s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #098553 3%, #ff3333 60%, #b2ffe5 100%);
+  background-color: #b300b3;
+}
+.container-fluid .plate .bols:nth-child(7) {
+  rotate: 78.75deg;
+}
+.container-fluid .plate .bols:nth-child(7)::before {
+  animation-delay: 0.875s;
+  background: radial-gradient(circle at 65% 15%, white 1px, white 3%, #ffff33 60%, white 100%);
+  background-color: #ffe9ec;
+}
+.container-fluid .plate .bols:nth-child(8) {
+  rotate: 90deg;
+}
+.container-fluid .plate .bols:nth-child(8)::before {
+  animation-delay: 1s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, #e4edf3 60%, #dadada 100%);
+  background-color: #20565d;
+}
+.container-fluid .plate .bols:nth-child(9) {
+  rotate: 101.25deg;
+}
+.container-fluid .plate .bols:nth-child(9)::before {
+  animation-delay: 1.125s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #ffe9ec 3%, #dadada 60%, #ff9999 100%);
+  background-color: #6ce7db;
+}
+.container-fluid .plate .bols:nth-child(10) {
+  rotate: 112.5deg;
+}
+.container-fluid .plate .bols:nth-child(10)::before {
+  animation-delay: 1.25s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #b30000 3%, white 60%, #e4edf3 100%);
+  background-color: #dadada;
+}
+.container-fluid .plate .bols:nth-child(11) {
+  rotate: 123.75deg;
+}
+.container-fluid .plate .bols:nth-child(11)::before {
+  animation-delay: 1.375s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #cbe37f 3%, #d6b7b7 60%, #ffb733 100%);
+  background-color: #e4edf3;
+}
+.container-fluid .plate .bols:nth-child(12) {
+  rotate: 135deg;
+}
+.container-fluid .plate .bols:nth-child(12)::before {
+  animation-delay: 1.5s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, white 60%, #6ce7db 100%);
+  background-color: #3333ff;
+}
+.container-fluid .plate .bols:nth-child(13) {
+  rotate: 146.25deg;
+}
+.container-fluid .plate .bols:nth-child(13)::before {
+  animation-delay: 1.625s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #d6b7b7 3%, #ff9999 60%, #00b3b3 100%);
+  background-color: #ff3333;
+}
+.container-fluid .plate .bols:nth-child(14) {
+  rotate: 157.5deg;
+}
+.container-fluid .plate .bols:nth-child(14)::before {
+  animation-delay: 1.75s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #ffa6a6 3%, #00b3b3 60%, #098553 100%);
+  background-color: white;
+}
+.container-fluid .plate .bols:nth-child(15) {
+  rotate: 168.75deg;
+}
+.container-fluid .plate .bols:nth-child(15)::before {
+  animation-delay: 1.875s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #ffff33 3%, #ffa6a6 60%, #e4edf3 100%);
+  background-color: #00b3b3;
+}
+.container-fluid .plate .bols:nth-child(16) {
+  rotate: 180deg;
+}
+.container-fluid .plate .bols:nth-child(16)::before {
+  animation-delay: 2s;
+  background: radial-gradient(circle at 65% 15%, white 1px, #dadada 3%, #cbe37f 60%, #2cd9d0 100%);
+  background-color: #2cd9d0;
+}
+@keyframes topToBottomBottomToTop {
+  0% {
+    bottom: 2.5%;
+  }
+  50% {
+    bottom: 95%;
+  }
+  100% {
+    bottom: 2.5%;
+  }
+}/*# sourceMappingURL=main.min.css.map */

@@ -1,0 +1,13 @@
+<section>
+  <h5>total iamge {{files.length}}</h5>
+  <div class="flex-wrap d-flex ">
+    <div class="card m-3" style="width: 18rem;" *ngFor="let item of files">
+      <img class="card-img-top" [src]="item.url" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <a href="#" class="btn btn-primary btn-icon bi bi-donwload" [href]="item.url" [download]="item.name"> download
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
