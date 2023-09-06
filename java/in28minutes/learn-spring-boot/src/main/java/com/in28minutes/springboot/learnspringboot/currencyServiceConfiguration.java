@@ -11,7 +11,6 @@ public class currencyServiceConfiguration {
 	private String key;
 
 	public currencyServiceConfiguration() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getUrl() {
