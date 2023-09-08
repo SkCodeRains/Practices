@@ -84,4 +84,23 @@ public class UserJpaResource {
                 .toUri();
         return ResponseEntity.created(location).build();
     }
+
+    @GetMapping("/jpa/users/{uid}/posts/{pid}")
+    public Post getPostForUser(@PathVariable Integer uid, @PathVariable Integer pid) {
+
+        return postRepository.findPostByIdAndUserId(pid, uid);
+
+        /*
+         * Optional<User> userFound = service.findById(uid);
+         * if (userFound == null) {
+         * throw new UserNotFoundException();
+         * }
+         * postRepository.findById(pid);
+         * 
+         * Predicate<? super Post> predicate = post -> post.getId().equals(pid);
+         * return
+         * userFound.get().getLsPost().stream().filter(predicate).findFirst().orElse(
+         * null);
+         */
+    }
 }
