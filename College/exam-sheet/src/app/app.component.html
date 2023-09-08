@@ -1,9 +1,0 @@
-<div [ngClass]="{'main-cover':showBackground}"></div>
-<app-header [(showBackground)]="showBackground"></app-header>
-<div class="card container-fluid bg-dark overflow-hidden mt-4" [ngClass]="{'opacity-75':showBackground}">
-    <app-filter (searchChange)="searchedTText=$event" [applicationData]="applicationData"
-        [selectedSemester]="selectedSemester" [filterParamters]="filterParamters"></app-filter>
-    <div class="table-container">
-        <app-table [searchText]="searchedTText" [tableData]="tableData"></app-table>
-    </div>
-</div>
