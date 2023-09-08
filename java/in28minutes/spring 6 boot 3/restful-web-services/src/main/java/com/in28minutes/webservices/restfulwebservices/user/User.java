@@ -1,19 +1,31 @@
 package com.in28minutes.webservices.restfulwebservices.user;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
-// @Entity
+@Entity(name = "user_details")
 public class User {
 
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Post> lsPost;
+
+    @Id
+    @GeneratedValue
     private Integer id;
 
     @Size(min = 4, message = "name must be greater than 4 character")
-    @JsonProperty("Person_Name")
+    @JsonProperty("person_name")
     private String name;
 
     @Past(message = "Birth Date Should Not Be Greater Than TodaTE")
@@ -56,5 +68,14 @@ public class User {
 
     public User() {
     }
+
+    public List<Post> getLsPost() {
+        return lsPost;
+    }
+
+    public void setLsPost(List<Post> lsPost) {
+        this.lsPost = lsPost;
+    }
+
 
 }
