@@ -37,7 +37,7 @@ export const TodoList = () => {
         deleteATodoByIdAndUsername(userName, id)
             .then((response) => {
                 console.log(response);
-                refreshData();
+                refreshData(userName);
             })
             .catch((response) => { console.log(response); });
     }

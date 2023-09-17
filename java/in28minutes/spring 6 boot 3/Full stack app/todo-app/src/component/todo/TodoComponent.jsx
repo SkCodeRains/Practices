@@ -102,7 +102,7 @@ export const TodoComponent = () => {
                                                 </fieldset>
 
                                                 <div>
-                                                    <button type='button' className="btn btn-primary" onClick={() => { onSubmit(props) }} >Submit</button>
+                                                    <button type='submit' className="btn btn-primary"  >Submit</button>
                                                 </div>
                                             </form>
                                         )

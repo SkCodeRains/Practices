@@ -12,30 +12,10 @@ export const LoginComponent = () => {
     const authContext = useAuth();
 
     async function handleSubmit() {
-
-        const baToken = 'Basic ' + window.btoa(userName + ":" + password);
-        try {
-            const response = await executeBasicAuthenticationService(baToken)
-            if (response.status == 200) {
-                setAuthenticated(true)
-                setUsername(username)
-                return true
-            } else {
-                setAuthenticated(false)
-                setUsername(null)
-                return false
-            }
-
-        } catch (error) {
-
-        }
-        if (authContext.login(userName, password)) {
-            setShowErrorMessage(false);
-            authContext.setUserName(userName);
+        if (await authContext.login(userName, password)) {
             navigate("/welcome/" + userName);
         } else {
             setShowErrorMessage(true);
-            navigate("/login");
         }
     }
 

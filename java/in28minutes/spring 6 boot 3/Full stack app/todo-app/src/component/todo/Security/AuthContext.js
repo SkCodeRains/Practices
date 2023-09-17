@@ -1,9 +1,13 @@
 import { createContext, useContext, useState } from "react";
+import { executeBasicAuthenticationService } from "../api/TodoApiService";
+import { apiClient } from "../api/ApiCient";
 
 const AuthContext = createContext();
 export default AuthContext;
 
 export const useAuth = () => useContext(AuthContext);
+
+
 
 
 
@@ -14,22 +18,47 @@ export function AuthProvider({ children }) {
 
     const [isAuthenticated, setAuthenticated] = useState(false);
     const [userName, setUserName] = useState(false);
-    function login(userName, password) {
-        if (userName === "superadmin" && password === "Test@123") {
-            setAuthenticated(true);
-            return true;
-        } else {
+    const [token, setToken] = useState("");
+
+
+
+    async function login(userName, password) {
+
+        const baToken = 'Basic ' + window.btoa(userName + ":" + password);
+        try {
+            const response = await executeBasicAuthenticationService(baToken);
+            if (response.status === 200) {
+                setAuthenticated(true);
+                setUserName(userName);
+                setToken(baToken);
+                apiClient.interceptors.request.use(
+                    (config) => {
+                        config.headers.Authorization = baToken;
+                        return config;
+                    }
+                )
+                return true;
+            } else {
+                setUserName(null);
+                setAuthenticated(false);
+                return false;
+            }
+
+        } catch (error) {
+            setUserName(null);
             setAuthenticated(false);
             return false;
         }
     }
+
+
 
     const logout = () => {
         AuthContext.logout();
     }
     setInterval(() => setNumber(number + 1), 10000)
     return (
-        <AuthContext.Provider value={{ number, isAuthenticated, setAuthenticated, userName, setUserName, login, logout }}>
+        <AuthContext.Provider value={{ number, isAuthenticated, setAuthenticated, userName, setUserName, login, logout, token }}>
             {children}
         </AuthContext.Provider>
     )
