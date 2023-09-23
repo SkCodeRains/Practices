@@ -9,8 +9,4 @@ export const createTodo = (username, todo) => apiClient.post(`/users/${username}
 
 
 
-export const executeBasicAuthenticationService = (token) => apiClient.get("/basicAuthentication", {
-    headers: {
-        Authorization: token
-    }
-});
+export const executeBasicAuthenticationService = (username, password) => apiClient.post("/authenticate", { username, password });

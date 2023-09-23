@@ -24,10 +24,11 @@ export function AuthProvider({ children }) {
 
     async function login(userName, password) {
 
-        const baToken = 'Basic ' + window.btoa(userName + ":" + password);
         try {
-            const response = await executeBasicAuthenticationService(baToken);
+            const response = await executeBasicAuthenticationService(userName, password);
             if (response.status === 200) {
+                const baToken = `Bearer ${response.data.token}`
+                console.log(baToken);
                 setAuthenticated(true);
                 setUserName(userName);
                 setToken(baToken);
