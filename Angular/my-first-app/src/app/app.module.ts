@@ -7,10 +7,12 @@ import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatNativeDateModule} from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MyCustomComponent } from './Components/My-components/custome.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyCustomComponent
   ],
   imports: [
     BrowserModule,

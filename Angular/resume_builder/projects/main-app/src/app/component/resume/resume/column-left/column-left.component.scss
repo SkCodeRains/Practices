@@ -1,0 +1,9 @@
+$left-panel-width: 70mm;
+$left-panel-height: 297mm;
+$left-panel-bg-color: #323B4C;
+
+.left-panel {
+    width: $left-panel-width;
+    height: $left-panel-height;
+    background-color: $left-panel-bg-color;
+}

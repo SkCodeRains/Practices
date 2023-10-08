@@ -1,0 +1,5 @@
+# Created at 2023-09-28T15:23:33.354
+Boot Manifest-JAR contains absolute paths in classpath 'e:\gits\Practices\java\in28minutes\spring 6 boot 3\91-aws\01-hello-world-java\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

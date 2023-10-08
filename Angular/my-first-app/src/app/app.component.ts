@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as JSZip from 'jszip';
 import { saveAs, encodeBase64 } from '@progress/kendo-file-saver';
 @Component({
@@ -6,10 +6,17 @@ import { saveAs, encodeBase64 } from '@progress/kendo-file-saver';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
+
+  name!: string;
+
+
   iteration = 1
 
   constructor() { }
+  ngAfterViewInit(): void {
+    this.name = "aman"
+  }
   ngOnInit(): void {
     const jszip = new JSZip();
     let int = setInterval(() => {

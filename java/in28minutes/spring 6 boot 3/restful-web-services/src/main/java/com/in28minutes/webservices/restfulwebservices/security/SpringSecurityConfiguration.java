@@ -14,10 +14,13 @@ public class SpringSecurityConfiguration {
 	@Bean
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
-		return http
-				.authorizeHttpRequests(auth -> auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll().anyRequest()
-						.authenticated())
+		return http.authorizeHttpRequests(
+				auth -> auth.requestMatchers("/**", "/**").permitAll().anyRequest().authenticated()
+
+		)
+
 				.httpBasic(withDefaults()).csrf(csrf -> csrf.disable())
+
 				.sessionManagement(ses -> ses.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).build();
 	}
 

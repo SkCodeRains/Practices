@@ -1,0 +1,22 @@
+$resume-header-width: 140mm;
+$resume-header-height: 297mm;
+$resume-header-bg-color: #f2f2f2;
+
+.resume-header {
+    .header-title {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid rgb(0, 0, 0);
+    }
+
+    width: $resume-header-width;
+    height: $resume-header-height;
+    background-color: $resume-header-bg-color;
+
+    .contacts {
+        width: 50mm;
+
+        .bi {
+            margin-right: 10px;
+        }
+    }
+}
