@@ -1,0 +1,30 @@
+<section class="image-generator">
+  <div class="content">
+    <h1>AI Image Generator Tool </h1>
+    <p>Convert your text into an image within a second using this
+      JavaScript-powered AI Image Generator tool.</p>
+    <div class="generate-form">
+      <input #inputText class="prompt-input" type="text" placeholder="Describe what you want to see" required>
+      <div class="controls">
+        <select #imgSize class="img-quantity">
+          <option [value]="1" selected>1 Image</option>
+          <option [value]="2">2 Images</option>
+          <option [value]="3">3 Images</option>
+          <!--  <option value="4" >4 Images</option> -->
+        </select>
+        <button (click)="generateImage(inputText,imgSize.value)" type="submit"
+          class="generate-btn">{{isImageGenerating?"Generate":"Generating"}}</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="image-gallery">
+  <ng-container *ngFor="let item of listOfImages">
+    <div class="img-card" [class.loading]="isImageGenerating">
+      <img [src]="item.url">
+      <a class="download-btn" [download]="'AI_image.jpg'" [href]="item.url">
+        <img src="assets/images/download.svg" title="Download image" alt="download icon">
+      </a>
+    </div>
+  </ng-container>
+</section>

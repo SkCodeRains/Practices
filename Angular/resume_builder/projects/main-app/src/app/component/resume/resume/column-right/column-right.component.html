@@ -1,4 +1,30 @@
-<ng-content></ng-content>
 <div class="right-panel">
-    
+    <ng-content></ng-content>
+    <div class="panel border border-2 border-top-0" *ngFor="let item of data.panels">
+        <div class="heading mt-2">
+            <h2 class="title p-0 m-0">{{item.title}}</h2>
+        </div>
+        <div class="body p-2">
+            <div class="role">{{item.role}}</div>
+            <div class="date mt-2 d-flex justify-content-between pe-5">
+                <div class="from">
+                    <i class="bi me-1 {{item.date.fromIcon?item.date.fromIcon:''}} "></i>
+                    {{item.date.from}} - <span class="to" *ngIf="item.date.to;else present">{{item.date.to}}
+                    </span>
+                    <ng-template #present>Present</ng-template>
+                </div>
+
+                <span class="at">
+                    <i class="bi me-1 {{item.date.atIcon?item.date.atIcon:''}} "></i>
+                    {{item.date.at}}</span>
+            </div>
+            <div class="list mt-2">
+                <ul>
+                    <ng-container *ngFor="let option of item.lists">
+                        <li>{{option}}</li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

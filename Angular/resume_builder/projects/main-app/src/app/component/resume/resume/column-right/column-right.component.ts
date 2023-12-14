@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-column-right',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./column-right.component.scss']
 })
 export class ColumnRightComponent {
-
+  @Input() data: any;
 }

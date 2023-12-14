@@ -2,7 +2,7 @@
 
     <div class="d-flex">
         <app-column-left></app-column-left>
-        <app-column-right>
+        <app-column-right [data]="pageData">
             <app-resume-header [config]="headerConfig"></app-resume-header>
         </app-column-right>
     </div>

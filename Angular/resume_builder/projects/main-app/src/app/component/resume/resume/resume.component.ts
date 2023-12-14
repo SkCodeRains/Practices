@@ -28,7 +28,69 @@ export class ResumeComponent {
         { name: "LeetCode", icon: "bi-code-square", href: "https://leetcode.com/coderains/" },
         { name: "CodeRains", icon: "bi-github", href: "https://github.com/SkCodeRains" },
       ]
-    }
+    },
+    panels: [
+      {
+        title: "Professional Experience",
+        role: "Fullstack Software Devloper | OSI Systems",
+        date: {
+          from: "Nov 2021",
+          to: "Sept 2023",
+          at: "Hyderabad",
+          atIcon: "bi-pin-fill",
+          fromIcon: "bi-calendar-check"
+        },
+        lists: [
+          "Strong experience developing responsive web interfaces",
+          "Strong experience with TYPESCRIPT",
+          "Working knowledge of front end optimization and performance techniques",
+          "Worked on the Angular material,bootstrap,element,jasmine and plotlyJs",
+          "Routing",
+          "Errors Handling",
+          "Micro Frontend / MicroServices"
+        ]
+      },
+      {
+        title: "Professional Experience",
+        role: "Fullstack Software Devloper | OSI Systems",
+        date: {
+          from: "Nov 2021",
+          to: "Sept 2023",
+          at: "Hyderabad",
+          atIcon: "bi-pin-fill",
+          fromIcon: "bi-calendar-check"
+        },
+        lists: [
+          "Strong experience developing responsive web interfaces",
+          "Strong experience with TYPESCRIPT",
+          "Working knowledge of front end optimization and performance techniques",
+          "Worked on the Angular material,bootstrap,element,jasmine and plotlyJs",
+          "Routing",
+          "Errors Handling",
+          "Micro Frontend / MicroServices"
+        ]
+      },
+      {
+        title: "Professional Experience",
+        role: "Fullstack Software Devloper | OSI Systems",
+        date: {
+          from: "Nov 2021",
+          to: "Sept 2023",
+          at: "Hyderabad",
+          atIcon: "bi-pin-fill",
+          fromIcon: "bi-calendar-check"
+        },
+        lists: [
+          "Strong experience developing responsive web interfaces",
+          "Strong experience with TYPESCRIPT",
+          "Working knowledge of front end optimization and performance techniques",
+          "Worked on the Angular material,bootstrap,element,jasmine and plotlyJs",
+          "Routing",
+          "Errors Handling",
+          "Micro Frontend / MicroServices"
+        ]
+      }
+    ]
   }
 
   get headerConfig() {

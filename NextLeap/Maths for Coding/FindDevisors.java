@@ -18,7 +18,7 @@ public class FindDevisors {
         List<Integer> divisor = new ArrayList<>();
        
 
-        for (int i = 1; i*i <= number ; i++) {  // 12 
+        for (int i = 1; i*i <= number ; i++) {  // 12                                                          
             if (number % i == 0) {
 
                 if (i != number / i) {
