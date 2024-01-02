@@ -7,13 +7,16 @@ $resume-header-bg-color: #f2f2f2;
         padding-bottom: 1rem;
         border-bottom: 2px solid rgb(0, 0, 0);
     }
+    label{
+        cursor: pointer;
+    }
 
     width: $resume-header-width;
     height: $resume-header-height;
     background-color: $resume-header-bg-color;
 
     .contacts {
-        width: 50mm;
+        width: 65mm;
 
         .bi {
             margin-right: 10px;

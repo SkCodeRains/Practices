@@ -1,9 +1,11 @@
 <div class="A4-size" #page>
 
-    <div class="d-flex">
-        <app-column-left></app-column-left>
-        <app-column-right [data]="pageData">
-            <app-resume-header [config]="headerConfig"></app-resume-header>
-        </app-column-right>
+    <div class="" style="background-image: url('./assets/images/bg.png');  background-size: cover; background-position: center;">
+        <div class="cover opacity d-flex" style="opacity: 0.95;">
+            <app-column-right [data]="pageData">
+                <app-resume-header [config]="headerConfig"></app-resume-header>
+            </app-column-right>
+            <app-column-left></app-column-left>
+        </div>
     </div>
 </div>

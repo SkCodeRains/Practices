@@ -1,9 +1,43 @@
-$left-panel-width: 70mm;
-$left-panel-height: 297mm;
-$left-panel-bg-color: #323B4C;
+$left-panel-width: 87mm;
+$left-panel-height: 332mm;
+$left-panel-bg-color: #006666;
 
 .left-panel {
     width: $left-panel-width;
     height: $left-panel-height;
     background-color: $left-panel-bg-color;
+    color: white;
+
+    .img {
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 100%;
+            border: solid rgb(0, 0, 0) 1px;
+            width: 180px;
+            height: 180px;
+        }
+
+
+    }
+
+    .box {
+        border-radius: 5px;
+        width: 90%;
+
+        .title {
+            border-bottom: solid rgb(196, 196, 196) 2px;
+            padding-bottom: 2px;
+
+        }
+
+        .details {
+            .text {
+                font-size: 12px;
+            }
+        }
+    }
 }

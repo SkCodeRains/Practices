@@ -19,75 +19,94 @@ export class ResumeComponent {
   pageData: any = {
     headerConfig: {
       name: "Mohammed Shaikh",
-      title: "FULLSTACK JAVA/ANGULAR WEB DEVELOPER",
+      title: "FULL STACK JAVA/ANGULAR WEB DEVELOPER",
       options: [
-        { name: "", icon: "bi-phone", value: "+91 7972914439" },
+        { name: "", icon: "bi-telephone-inbound-fill", value: "+91 7972914439" },
+        { name: "", icon: "bi-pin-map-fill", value: "Amravati , Maharashtra , India" },
         { name: "Mail", icon: "bi-google", href: "mailto:skcoderains@gmail.com" },
-        { name: "", icon: "bi-pin", value: "Amravati Maharashtra" },
         { name: "Linkedin", icon: "bi-linkedin", href: "https://www.linkedin.com/in/mohammed-shaikh-6a9aa21b2/" },
         { name: "LeetCode", icon: "bi-code-square", href: "https://leetcode.com/coderains/" },
         { name: "CodeRains", icon: "bi-github", href: "https://github.com/SkCodeRains" },
+        { name: "Portfolio", icon: "bi-award-fill", href: "https://nextleap.app/portfolio/mohammed-shaikh" },
       ]
     },
     panels: [
       {
         title: "Professional Experience",
-        role: "Fullstack Software Devloper | OSI Systems",
-        date: {
-          from: "Nov 2021",
-          to: "Sept 2023",
-          at: "Hyderabad",
-          atIcon: "bi-pin-fill",
-          fromIcon: "bi-calendar-check"
-        },
-        lists: [
-          "Strong experience developing responsive web interfaces",
-          "Strong experience with TYPESCRIPT",
-          "Working knowledge of front end optimization and performance techniques",
-          "Worked on the Angular material,bootstrap,element,jasmine and plotlyJs",
-          "Routing",
-          "Errors Handling",
-          "Micro Frontend / MicroServices"
+        exps: [
+          {
+            role: "Full stack Software Developer | OSI Systems",
+            date: {
+              from: "May 2022",
+              to: "Sept 2023",
+              at: "Hyderabad",
+              atIcon: "bi-pin-fill",
+              fromIcon: "bi-calendar-check"
+            },
+            lists: [
+              "Successfully led the migration of an AngularJS application to the latest Angular version, ensuring improved performance, responsiveness, and compatibility with modern web standards.",
+              "Applied best practices to achieve a fast and responsive transition, minimizing downtime and ensuring a seamless user experience during the migration.",
+              "skilled in utilizing Angular Material, Bootstrap, Element, Jasmine, and Plotly.Js.",
+              `Achieved improved scalability and flexibility in the application by adopting Micro-Front-End principles, allowing for independent development and deployment of individual features.`,
+              `Developed a robust Tools Management System to streamline the organization and utilization of various tools within the application.`,
+              `Successfully developed Spring-Flow web apps, showcasing proficiency in dynamic component rendering for personalized widgets.`,
+              `Improved efficiency by creating a centralized system for managing and updating tools, resulting in a more organized and user-friendly development environment.`,
+
+            ]
+          },
+          {
+            role: "Internship | OSI Systems",
+            date: {
+              from: "Nov 2021",
+              to: "May 2022",
+              at: "Hyderabad",
+              atIcon: "bi-pin-fill",
+              fromIcon: "bi-calendar-check"
+            },
+            lists: [
+              "As part of CertScan® team at osi",
+              "Contributed to the migration of project data-flow and transaction ",
+              "Played a key role in application routing for seamless navigation and state management, contributing to the creation of a dynamic web app",
+              "Strong experience developing responsive web interfaces",
+            ],
+
+          },
+
         ]
       },
       {
-        title: "Professional Experience",
-        role: "Fullstack Software Devloper | OSI Systems",
-        date: {
-          from: "Nov 2021",
-          to: "Sept 2023",
-          at: "Hyderabad",
-          atIcon: "bi-pin-fill",
-          fromIcon: "bi-calendar-check"
+        title: "Skills / Technologies",
+        adds: {
+          title: "Skills / Technologies",
+          data: [
+            "Git", "Angular", "Java", "Spring Boot", "HTML", "SCSS", "TypeScript", "JavaScript", "Angular Material", "Spring MVC", "NgBootstrap", "Docker", "Jenkins", "Agile",
+            "Spring Core", "PL-SQL", "Spring Security", "ReactJS"
+          ]
         },
-        lists: [
-          "Strong experience developing responsive web interfaces",
-          "Strong experience with TYPESCRIPT",
-          "Working knowledge of front end optimization and performance techniques",
-          "Worked on the Angular material,bootstrap,element,jasmine and plotlyJs",
-          "Routing",
-          "Errors Handling",
-          "Micro Frontend / MicroServices"
-        ]
       },
       {
-        title: "Professional Experience",
-        role: "Fullstack Software Devloper | OSI Systems",
-        date: {
-          from: "Nov 2021",
-          to: "Sept 2023",
-          at: "Hyderabad",
-          atIcon: "bi-pin-fill",
-          fromIcon: "bi-calendar-check"
-        },
-        lists: [
-          "Strong experience developing responsive web interfaces",
-          "Strong experience with TYPESCRIPT",
-          "Working knowledge of front end optimization and performance techniques",
-          "Worked on the Angular material,bootstrap,element,jasmine and plotlyJs",
-          "Routing",
-          "Errors Handling",
-          "Micro Frontend / MicroServices"
+        title: "Education",
+        exps: [
+          /*         {
+                    role: " . . Master Of Computer Application (MCA) ",
+                    date: {
+                      from: "Jan 2023",
+                      to: "Dec 2024",
+                      at: "Chandigarh University(CU)",
+                      atIcon: "bi-pin-fill",
+                      fromIcon: "bi-calendar-check"
+                    }
+                  }, */
+          {
+            role: " . . Bachelor Of Computer Application (BCA)",
+            date: {
+              from: "Nov 2015",
+              to: "May 2020",
+              at: "Babanrao Deshmukh College Amravati",
+              atIcon: "bi-pin-fill",
+              fromIcon: "bi-calendar-check"
+            }
+          }
         ]
       }
     ]

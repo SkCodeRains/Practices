@@ -1,10 +1,10 @@
 <div class="right-panel">
     <ng-content></ng-content>
-    <div class="panel border border-2 border-top-0" *ngFor="let item of data.panels">
+    <div class="panel border border-2 border-top-0" *ngFor="let data of data.panels">
         <div class="heading mt-2">
-            <h2 class="title p-0 m-0">{{item.title}}</h2>
+            <h3 class="title p-0 m-0 fw-bold">{{data.title}}</h3>
         </div>
-        <div class="body p-2">
+        <div class="body p-1" *ngFor="let item of data.exps">
             <div class="role">{{item.role}}</div>
             <div class="date mt-2 d-flex justify-content-between pe-5">
                 <div class="from">
@@ -24,6 +24,16 @@
                         <li>{{option}}</li>
                     </ng-container>
                 </ul>
+            </div>
+        </div>
+        <div class="p-2" *ngIf="data.adds">
+            <div class="d-flex">
+                <span class=" w-50">{{ data.adds.title}} : </span> <span>
+                    <span *ngFor="let name of data.adds.data">
+                        <button
+                            class="btn  btn-icon border border-1 border-secondary py-1 px-2 mx-1 mt-1 rounded">{{name}}</button>
+                    </span>
+                </span>
             </div>
         </div>
     </div>

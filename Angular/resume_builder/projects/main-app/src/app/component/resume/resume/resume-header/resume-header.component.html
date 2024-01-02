@@ -1,4 +1,4 @@
-<div class="resume-header container-fluid p-0 ps-2">
+<div class="resume-header container-fluid p-0 ps-2 pt-3 pb-3">
     <h1 class="mb-1">{{config.name}}</h1>
     <p class="header-title">{{config.title}}</p>
     <div class="details d-flex flex-wrap">
@@ -16,13 +16,13 @@
                     <i class="bi {{option.icon}}"></i>
                 </div>
                 <div class="w-75 l">
-                    <a target="_blank" [href]="option.value">
+                    <a target="_blank" [href]="option.href">
                         <label>{{option.name}}</label>
                     </a>
                 </div>
             </div>
         </ng-container>
 
-  
+
     </div>
 </div>
