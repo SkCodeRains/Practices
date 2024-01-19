@@ -19,9 +19,9 @@ export class ResumeComponent {
   pageData: any = {
     headerConfig: {
       name: "Mohammed Shaikh",
-      title: "FULL STACK JAVA/ANGULAR WEB DEVELOPER",
+      title: "FULL STACK DEVELOPER",
       options: [
-        { name: "", icon: "bi-telephone-inbound-fill", value: "+91 7972914439" },
+        { name: "+917972914439", icon: "bi-telephone-inbound-fill", href: "tel:+917972914439" },
         { name: "", icon: "bi-pin-map-fill", value: "Amravati , Maharashtra , India" },
         { name: "Mail", icon: "bi-google", href: "mailto:skcoderains@gmail.com" },
         { name: "Linkedin", icon: "bi-linkedin", href: "https://www.linkedin.com/in/mohammed-shaikh-6a9aa21b2/" },
@@ -35,7 +35,7 @@ export class ResumeComponent {
         title: "Professional Experience",
         exps: [
           {
-            role: "Full stack Software Developer | OSI Systems",
+            role: "Full Stack Software Developer | OSI Systems",
             date: {
               from: "May 2022",
               to: "Sept 2023",
@@ -76,13 +76,35 @@ export class ResumeComponent {
       },
       {
         title: "Skills / Technologies",
-        adds: {
-          title: "Skills / Technologies",
-          data: [
-            "Git", "Angular", "Java", "Spring Boot", "HTML", "SCSS", "TypeScript", "JavaScript", "Angular Material", "Spring MVC", "NgBootstrap", "Docker", "Jenkins", "Agile",
-            "Spring Core", "PL-SQL", "Spring Security", "ReactJS"
-          ]
-        },
+        adds: [
+          {
+            title: "Frontend",
+            data: [
+              "Angular", "HTML", "CSS", "TypeScript", "JavaScript", "Angular Material", "NgBootstrap"
+            ]
+          },
+          {
+            title: "Backend",
+            data: [
+              "Java", "Spring Boot", " Spring MVC", " Spring Core", "PL-SQL", "Spring Security", "Postgres", "MySql", "Oracle DB"
+            ]
+          }
+          ,
+          {
+            title: "DevOps",
+            data: [
+              "Git", "Docker", "Jenkins"
+            ]
+          }
+          /*  ,
+           {
+             title: "Skills  / Technologies",
+             data: [
+               "Git", "Angular", "Java", "Spring Boot", "HTML", "SCSS", "TypeScript", "JavaScript", "Angular Material", "Spring MVC", "NgBootstrap", "Docker", "Jenkins", "Agile",
+               "Spring Core", "PL-SQL", "Spring Security", "ReactJS"
+             ]
+           } */
+        ],
       },
       {
         title: "Education",

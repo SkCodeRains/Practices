@@ -5,7 +5,7 @@
             <h3 class="title p-0 m-0 fw-bold">{{data.title}}</h3>
         </div>
         <div class="body p-1" *ngFor="let item of data.exps">
-            <div class="role">{{item.role}}</div>
+            <div class="role fw-bold">{{item.role}}</div>
             <div class="date mt-2 d-flex justify-content-between pe-5">
                 <div class="from">
                     <i class="bi me-1 {{item.date.fromIcon?item.date.fromIcon:''}} "></i>
@@ -27,9 +27,9 @@
             </div>
         </div>
         <div class="p-2" *ngIf="data.adds">
-            <div class="d-flex">
-                <span class=" w-50">{{ data.adds.title}} : </span> <span>
-                    <span *ngFor="let name of data.adds.data">
+            <div class="d-flex" *ngFor="let add of data.adds">
+                <span class=" me-2 text-nowrap fw-bold">{{ add.title}} : </span> <span>
+                    <span *ngFor="let name of add.data">
                         <button
                             class="btn  btn-icon border border-1 border-secondary py-1 px-2 mx-1 mt-1 rounded">{{name}}</button>
                     </span>

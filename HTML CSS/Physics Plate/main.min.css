@@ -57,64 +57,64 @@ body {
 }
 .container-fluid .plate .bols:nth-child(1)::before {
   animation-delay: 0.125s;
-  background: radial-gradient(circle at 65% 15%, white 1px, white 3%, #098553 60%, #ffa6a6 100%);
-  background-color: #d6b7b7;
+  background: radial-gradient(circle at 65% 15%, white 1px, #2cd9d0 3%, #098553 60%, #00b3b3 100%);
+  background-color: #ffe9ec;
 }
 .container-fluid .plate .bols:nth-child(2) {
   rotate: 22.5deg;
 }
 .container-fluid .plate .bols:nth-child(2)::before {
   animation-delay: 0.25s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #ffb733 3%, #ff3333 60%, #ff9999 100%);
-  background-color: #098553;
+  background: radial-gradient(circle at 65% 15%, white 1px, #e4edf3 3%, #ffa6a6 60%, #e4edf3 100%);
+  background-color: #ff9999;
 }
 .container-fluid .plate .bols:nth-child(3) {
   rotate: 33.75deg;
 }
 .container-fluid .plate .bols:nth-child(3)::before {
   animation-delay: 0.375s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #b30000 3%, #b30000 60%, #33ffff 100%);
-  background-color: #ffb3f4;
+  background: radial-gradient(circle at 65% 15%, white 1px, #20565d 3%, #20565d 60%, #098553 100%);
+  background-color: #33ffff;
 }
 .container-fluid .plate .bols:nth-child(4) {
   rotate: 45deg;
 }
 .container-fluid .plate .bols:nth-child(4)::before {
   animation-delay: 0.5s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, #00b3b3 60%, #6ce7db 100%);
-  background-color: #cbe37f;
+  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, white 60%, #098553 100%);
+  background-color: gray;
 }
 .container-fluid .plate .bols:nth-child(5) {
   rotate: 56.25deg;
 }
 .container-fluid .plate .bols:nth-child(5)::before {
   animation-delay: 0.625s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #cbe37f 3%, #cbe37f 60%, white 100%);
-  background-color: #ffb3f4;
+  background: radial-gradient(circle at 65% 15%, white 1px, #004d99 3%, #ffe3d3 60%, #20565d 100%);
+  background-color: #6ce7db;
 }
 .container-fluid .plate .bols:nth-child(6) {
   rotate: 67.5deg;
 }
 .container-fluid .plate .bols:nth-child(6)::before {
   animation-delay: 0.75s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #098553 3%, #ff3333 60%, #b2ffe5 100%);
-  background-color: #b300b3;
+  background: radial-gradient(circle at 65% 15%, white 1px, #20565d 3%, #20565d 60%, #d6b7b7 100%);
+  background-color: gray;
 }
 .container-fluid .plate .bols:nth-child(7) {
   rotate: 78.75deg;
 }
 .container-fluid .plate .bols:nth-child(7)::before {
   animation-delay: 0.875s;
-  background: radial-gradient(circle at 65% 15%, white 1px, white 3%, #ffff33 60%, white 100%);
-  background-color: #ffe9ec;
+  background: radial-gradient(circle at 65% 15%, white 1px, white 3%, #6ce7db 60%, #2cd9d0 100%);
+  background-color: #ff9999;
 }
 .container-fluid .plate .bols:nth-child(8) {
   rotate: 90deg;
 }
 .container-fluid .plate .bols:nth-child(8)::before {
   animation-delay: 1s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, #e4edf3 60%, #dadada 100%);
-  background-color: #20565d;
+  background: radial-gradient(circle at 65% 15%, white 1px, #2cd9d0 3%, #cbe37f 60%, #ffb733 100%);
+  background-color: #2cd9d0;
 }
 .container-fluid .plate .bols:nth-child(9) {
   rotate: 101.25deg;
@@ -122,63 +122,63 @@ body {
 .container-fluid .plate .bols:nth-child(9)::before {
   animation-delay: 1.125s;
   background: radial-gradient(circle at 65% 15%, white 1px, #ffe9ec 3%, #dadada 60%, #ff9999 100%);
-  background-color: #6ce7db;
+  background-color: #ffff33;
 }
 .container-fluid .plate .bols:nth-child(10) {
   rotate: 112.5deg;
 }
 .container-fluid .plate .bols:nth-child(10)::before {
   animation-delay: 1.25s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #b30000 3%, white 60%, #e4edf3 100%);
-  background-color: #dadada;
+  background: radial-gradient(circle at 65% 15%, white 1px, #ffff33 3%, #ffb3f4 60%, #ff9999 100%);
+  background-color: #b2ffe5;
 }
 .container-fluid .plate .bols:nth-child(11) {
   rotate: 123.75deg;
 }
 .container-fluid .plate .bols:nth-child(11)::before {
   animation-delay: 1.375s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #cbe37f 3%, #d6b7b7 60%, #ffb733 100%);
-  background-color: #e4edf3;
+  background: radial-gradient(circle at 65% 15%, white 1px, #098553 3%, #b2ffe5 60%, #d6b7b7 100%);
+  background-color: #fff3f5;
 }
 .container-fluid .plate .bols:nth-child(12) {
   rotate: 135deg;
 }
 .container-fluid .plate .bols:nth-child(12)::before {
   animation-delay: 1.5s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #6ce7db 3%, white 60%, #6ce7db 100%);
-  background-color: #3333ff;
+  background: radial-gradient(circle at 65% 15%, white 1px, #b2ffe5 3%, #fff3f5 60%, gray 100%);
+  background-color: #33ffff;
 }
 .container-fluid .plate .bols:nth-child(13) {
   rotate: 146.25deg;
 }
 .container-fluid .plate .bols:nth-child(13)::before {
   animation-delay: 1.625s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #d6b7b7 3%, #ff9999 60%, #00b3b3 100%);
-  background-color: #ff3333;
+  background: radial-gradient(circle at 65% 15%, white 1px, #ff9999 3%, #ffe9ec 60%, #ff9999 100%);
+  background-color: gray;
 }
 .container-fluid .plate .bols:nth-child(14) {
   rotate: 157.5deg;
 }
 .container-fluid .plate .bols:nth-child(14)::before {
   animation-delay: 1.75s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #ffa6a6 3%, #00b3b3 60%, #098553 100%);
-  background-color: white;
+  background: radial-gradient(circle at 65% 15%, white 1px, #d6b7b7 3%, #ffb3f4 60%, #dadada 100%);
+  background-color: #2cd9d0;
 }
 .container-fluid .plate .bols:nth-child(15) {
   rotate: 168.75deg;
 }
 .container-fluid .plate .bols:nth-child(15)::before {
   animation-delay: 1.875s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #ffff33 3%, #ffa6a6 60%, #e4edf3 100%);
-  background-color: #00b3b3;
+  background: radial-gradient(circle at 65% 15%, white 1px, #33ffff 3%, #ff3333 60%, #b2ffe5 100%);
+  background-color: #ffb733;
 }
 .container-fluid .plate .bols:nth-child(16) {
   rotate: 180deg;
 }
 .container-fluid .plate .bols:nth-child(16)::before {
   animation-delay: 2s;
-  background: radial-gradient(circle at 65% 15%, white 1px, #dadada 3%, #cbe37f 60%, #2cd9d0 100%);
-  background-color: #2cd9d0;
+  background: radial-gradient(circle at 65% 15%, white 1px, #b2ffe5 3%, #ff3333 60%, #ff9999 100%);
+  background-color: #00b3b3;
 }
 @keyframes topToBottomBottomToTop {
   0% {

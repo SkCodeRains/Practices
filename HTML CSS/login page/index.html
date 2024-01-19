@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <section class="vh-100 d-flex justify-content-center align-items-center   vw-100 ">
+        <div class="login-panel w-50  bg-white p-3 py-5 ">
+            <form action="/register.ss" method="post">
+
+                <div class="row">
+                    <div class="form-group col-8">
+                        <label for="Username">Name</label>
+                        <input type="text" name="username" class="form-control" id="Username"
+                            placeholder="Enter Username">
+
+                    </div>
+                    <div class="cities col-md-4">
+                        <label>Select City</label>
+                        <select class="form-control">
+                            <option value="none">Default select</option>
+                            <option value="Amravati" selected>Amravati</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Kolkata">Kolkata </option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <textarea class="form-control" placeholder="Please enter address" name="address" id="Address"
+                        rows="3"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="gender col-3">
+                        <label>Select Gender</label>
+                        <div class=" form-check ms-2">
+                            <input class="form-check-input" type="radio" name="gender" value="Male" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check ms-2">
+                            <input class="form-check-input" type="radio" name="gender" value="Female"
+                                id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="vehicle">
+                    <label>Select Vehicle : </label>
+                    <div class="form-check form-check-inline ms-3 border border-1 border-secondary">
+                        <input class="form-check-input" type="checkbox" name="vehicle" id="inlineCheckbox1" value="car">
+                        <label class="form-check-label" for="inlineCheckbox1">Car</label>
+                    </div>
+                    <div class="form-check form-check-inline ms-3 border border-1 border-secondary">
+                        <input class="form-check-input" type="checkbox" name="vehicle" id="inlineCheckbox2"
+                            value="Scooty">
+                        <label class="form-check-label" for="inlineCheckbox2">Scooty</label>
+                    </div>
+                    <div class="form-check form-check-inline ms-3 border border-1 border-secondary">
+                        <input class="form-check-input" type="checkbox" name="vehicle" id="inlineCheckbox3"
+                            value="Bike">
+                        <label class="form-check-label" for="inlineCheckbox3">Bike</label>
+                    </div>
+                </div>
+                <div class="upload-pic col-9">
+                    <label>Select Picture : </label>
+
+                    <div class="custom-file w-100  border-secondary">
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <!-- <label class="custom-file-label" for="validatedCustomFile">Choose file...</label> -->
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center pt-5">
+                    <button class="btn btn-primary me-2 px-5">Submit</button>
+                    <button class="btn btn-secondary ms-2 px-5">Reset</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
