@@ -2,7 +2,7 @@ package com.coderains.rainsbank.config;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List; 
+import java.util.List;
 
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -13,7 +13,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
- 
+
 import com.coderains.rainsbank.model.Customer;
 import com.coderains.rainsbank.repository.CustomerRepository;
 
@@ -39,6 +39,8 @@ public class RainsBankUsernamePasswordAuthenticationProvider implements Authenti
 	}
 
 	private Collection<? extends GrantedAuthority> getAuthority(String role) {
+		/* From Backend i will get "ROLE_USER" */
+		/* @VARIABLE (role = "ROLE_USER") */
 		List<GrantedAuthority> gAuthority = new ArrayList<>();
 		gAuthority.add(new SimpleGrantedAuthority(role));
 		return gAuthority;

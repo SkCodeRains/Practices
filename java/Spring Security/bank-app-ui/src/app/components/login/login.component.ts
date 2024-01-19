@@ -26,13 +26,9 @@ export class LoginComponent implements OnInit {
   validateUser(loginForm: NgForm) {
     this.loginService.validateLoginDetails(this.model).subscribe(
       responseData => {
-        console.log(responseData);
-        console.log(responseData.headers);
-        console.log(responseData.headers.get("Authorization"));
         window.sessionStorage.setItem("Authorization", responseData.headers.get("Authorization")!);
         window.sessionStorage.setItem("Logged", "YES");
         this.model = <any>responseData.body;
-
         this.model.authStatus = 'AUTH';
         window.sessionStorage.setItem("userdetails", JSON.stringify(this.model));
         let xsrf = getCookie('XSRF-TOKEN')!;
