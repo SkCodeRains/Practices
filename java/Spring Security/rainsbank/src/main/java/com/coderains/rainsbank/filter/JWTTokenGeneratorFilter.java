@@ -27,8 +27,10 @@ public class JWTTokenGeneratorFilter extends OncePerRequestFilter {
 			@NonNull FilterChain filterChain) throws ServletException, IOException {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (authentication != null) {
+			System.out.println("role is : " + authentication.getAuthorities());
 			SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes(StandardCharsets.UTF_8));
-			String jwt = Jwts.builder().issuer("Rains bank").subject("Rains Token").claim("username", authentication.getName())
+			String jwt = Jwts.builder().issuer("Rains bank").subject("Rains Token")
+					.claim("username", authentication.getName())
 					.claim("authorities", authentication.getAuthorities()).issuedAt(new Date())
 					.expiration(new Date(new Date().getTime() + 30000000)).signWith(key).compact();
 			response.setHeader(SecurityConstants.JWT_HEADER, jwt);

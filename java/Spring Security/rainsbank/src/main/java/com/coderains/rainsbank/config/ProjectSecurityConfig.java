@@ -49,27 +49,22 @@ public class ProjectSecurityConfig {
 						return config;
 					}
 				}))
-				.csrf(csrf -> csrf.csrfTokenRequestHandler(csrfHandler)
+				.csrf(csrf -> csrf
+						.csrfTokenRequestHandler(csrfHandler)
 						.ignoringRequestMatchers("/contact.ss", "/register.ss")
-						.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-
-				)
-				.addFilterBefore(new RequestValidationBeforeFilter(), BasicAuthenticationFilter.class)
+						.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
 				.addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)
+				// .addFilterAfter(new RequestValidationBeforeFilter(), JWTTokenValidatorFilter.class)
 				.addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
 				.addFilterAfter(new AuthoritiesLoggingAfterFilter(), BasicAuthenticationFilter.class)
 				.addFilterAfter(new JWTTokenGeneratorFilter(), BasicAuthenticationFilter.class)
 				.authorizeHttpRequests(
 						(request) -> request
-								// requestMatchers ("/myAccount"). hasAuthority (VIEWACCOUNT")
-								// requestMatchers("/myBalance").hasAnyAuthority ("VIEWACCOUNT", "VIEWBALANCE")
-								// requestMatchers("/myLoans"). hasAuthority ("VIEWLOANS")
-								// requestMatchers"/myCards").hasAuthority ("VIEWCARDS"
 								.requestMatchers("/myBalance.ss").hasAnyRole("USER", "ADMIN")
 								.requestMatchers("/myAccount.ss").hasRole("USER")
 								.requestMatchers("/myLoans.ss").hasRole("USER")
 								.requestMatchers("/myCards.ss").hasRole("USER")
-								.requestMatchers("/user.ss").authenticated()
+								.requestMatchers("/user.ss", "/myBalance.ss").authenticated()
 								.requestMatchers("/notices.ss", "/contact.ss", "/register.ss").permitAll())
 				.formLogin(Customizer.withDefaults())
 				.httpBasic(Customizer.withDefaults())
