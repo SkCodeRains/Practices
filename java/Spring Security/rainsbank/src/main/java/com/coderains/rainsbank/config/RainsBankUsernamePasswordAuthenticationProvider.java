@@ -32,7 +32,10 @@ public class RainsBankUsernamePasswordAuthenticationProvider implements Authenti
 		String password = authentication.getCredentials().toString();
 		Customer customer = customerRepository.findByUsername(username);
 		if (customer != null && passwordEncoder.matches(password, customer.getPwd())) {
-			return new UsernamePasswordAuthenticationToken(username, password, getAuthority(customer.getRole()));
+			Collection<? extends GrantedAuthority> authorities = getAuthority(customer.getRole());
+			System.out.println(authorities);
+			System.out.println("Authorities for role {}: {}" + customer.getRole() + "   :   " + authorities);
+			return new UsernamePasswordAuthenticationToken(username, password, authorities);
 		} else {
 			throw new BadCredentialsException("username or password not valid");
 		}

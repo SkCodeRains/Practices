@@ -2,6 +2,9 @@ package com.coderains.rainsbank.filter;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import javax.crypto.SecretKey;
 
@@ -9,7 +12,8 @@ import org.springframework.lang.NonNull;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -34,9 +38,9 @@ public class JWTTokenValidatorFilter extends OncePerRequestFilter {
 				SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes(StandardCharsets.UTF_8));
 				Claims claims = Jwts.parser().verifyWith(key).build().parseSignedClaims(jwt).getPayload();
 				String username = String.valueOf(claims.get("username"));
-				String authorities = String.valueOf(claims.get("authorities"));
+				// String authorities = String.valueOf(claims.get("authorities"));
 				Authentication authentication = new UsernamePasswordAuthenticationToken(username, null,
-						AuthorityUtils.commaSeparatedStringToAuthorityList(authorities));
+						extractRoleUser(claims));
 				SecurityContextHolder.getContext().setAuthentication(authentication);
 
 			} catch (Exception e) {
@@ -44,6 +48,20 @@ public class JWTTokenValidatorFilter extends OncePerRequestFilter {
 			}
 		}
 		filterChain.doFilter(request, response);
+	}
+
+	@SuppressWarnings("unchecked")
+	private static List<GrantedAuthority> extractRoleUser(Claims claims) {
+		List<Map<String, String>> authorities = (List<Map<String, String>>) claims.get("authorities");
+		List<GrantedAuthority> gAuthority = new ArrayList<>();
+		if (authorities != null) {
+			for (var authority : authorities) {
+				authority.get("authorities");
+				gAuthority.add(new SimpleGrantedAuthority(authority.get("authority")));
+
+			}
+		}
+		return gAuthority; // Return null if ROLE_USER is not found in authorities
 	}
 
 	@Override

@@ -32,7 +32,7 @@ public class JWTTokenGeneratorFilter extends OncePerRequestFilter {
 			String jwt = Jwts.builder().issuer("Rains bank").subject("Rains Token")
 					.claim("username", authentication.getName())
 					.claim("authorities", authentication.getAuthorities()).issuedAt(new Date())
-					.expiration(new Date(new Date().getTime() + 30000000)).signWith(key).compact();
+					.expiration(new Date(new Date().getTime() + 300000)).signWith(key).compact();
 			response.setHeader(SecurityConstants.JWT_HEADER, jwt);
 		}
 		filterChain.doFilter(request, response);
