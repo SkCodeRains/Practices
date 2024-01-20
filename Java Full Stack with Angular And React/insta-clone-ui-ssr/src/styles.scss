@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */ 
+
+::ng-deep {
+    @import 'bootstrap/scss/bootstrap';
+}
+
+#exampleInputEmail1{
+    background-color: red !important;
+}

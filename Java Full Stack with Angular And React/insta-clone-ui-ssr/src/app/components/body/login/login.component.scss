@@ -1,0 +1,14 @@
+.login {
+    form {
+        .instaform {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+
+            label {
+                position: absolute;
+                margin-left: 10px;
+            }
+        }
+    }
+}
