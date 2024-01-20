@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-InstaCloneApplication<insta-clone>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.coderains.world.instaclone.InstaCloneApplication",
+            "projectName": "insta-clone",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
