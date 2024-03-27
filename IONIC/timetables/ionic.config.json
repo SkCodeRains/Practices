@@ -1,0 +1,7 @@
+{
+  "name": "timetables",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

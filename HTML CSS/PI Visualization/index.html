@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+    <title>Stick Drawing</title>
+</head>
+<body>
+    <canvas id="stickCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('stickCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        let stickLength = 100;
+        let stickAngle = 0;
+        let stickSpeed = 0.02;
+        let trailLength = 10;
+        let trail = [];
+
+        function draw() {
+            // Calculate new position
+            const x = centerX + stickLength * Math.cos(stickAngle);
+            const y = centerY + stickLength * Math.sin(stickAngle);
+
+            // Draw the stick
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.moveTo(centerX, centerY);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            // Add current position to the trail
+            trail.push({ x, y });
+
+            // Draw the trail
+            for (let i = Math.max(0, trail.length - trailLength); i < trail.length - 1; i++) {
+                ctx.beginPath();
+                ctx.moveTo(trail[i].x, trail[i].y);
+                ctx.lineTo(trail[i + 1].x, trail[i + 1].y);
+                ctx.stroke();
+            }
+
+            // Update stick position for animation
+            stickAngle += stickSpeed;
+
+            // Request animation frame
+            requestAnimationFrame(draw);
+        }
+
+        // Start the animation
+        draw();
+    </script>
+</body>
+</html>

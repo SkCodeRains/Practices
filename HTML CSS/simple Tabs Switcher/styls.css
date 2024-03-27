@@ -1,0 +1,59 @@
+html body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0b0808;
+}
+html body .container {
+  height: 100vh;
+  padding: 3rem;
+}
+html body .container .container2 {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+html body .container .container2 :nth-child(2) {
+  margin-left: 2rem;
+}
+html body .container .container2 :nth-child(2) h3 {
+  color: yellow;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+html body .container .container2 :nth-child(2) h5 {
+  color: wheat;
+  margin-top: 0;
+  padding-top: 0;
+}
+html body .container .tab-panel * {
+  color: white;
+  font-size: 1.5rem;
+}
+html body .container .tab-panel .tabs .tab {
+  border-radius: 0.3rem;
+  padding: 0.7rem;
+  border: none;
+  background-color: #292727;
+}
+html body .container .tab-panel .tabs .active {
+  background-color: yellow;
+  color: black;
+}
+html body .container .tab-panel .panel {
+  background-color: #292727;
+}
+html body .container .tab-panel .panel .data {
+  display: none;
+}
+html body .container .tab-panel .panel .data.active {
+  display: block !important;
+}
+html body .container .tab-panel .panel ul {
+  margin: 0;
+  padding: 1rem 6rem;
+}
+html body .container .tab-panel .panel ul li {
+  padding: 0.3rem;
+}/*# sourceMappingURL=styls.css.map */

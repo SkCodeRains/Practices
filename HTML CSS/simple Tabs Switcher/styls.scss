@@ -1,0 +1,92 @@
+html {
+
+    body {
+
+        height: 100vh;
+        width: 100vw;
+        background-color: #0b0808;
+
+        .container {
+            height: 100vh;
+            padding: 3rem;
+
+
+
+            .container2 {
+                display: flex;
+                height: fit-content;
+
+                :nth-child(2) {
+                    margin-left: 2rem;
+
+                    h3 {
+                        color: yellow;
+                        font-size: 2rem;
+                        margin: 0;
+                        margin-bottom: .5rem;
+                        padding: 0;
+                    }
+
+                    h5 {
+                        color: wheat;
+                        margin-top: 0;
+                        padding-top: 0;
+                    }
+                }
+
+
+            }
+
+            .tab-panel {
+                * {
+                    color: white;
+                    font-size: 1.5rem;
+                }
+
+
+                .tabs {
+
+
+
+                    .tab {
+                        border-radius: .3rem;
+                        padding: .7rem;
+                        border: none;
+                        background-color: #292727;
+
+                    }
+
+                    .active {
+                        background-color: yellow;
+                        color: black;
+                    }
+                }
+
+                .panel {
+                    background-color: #292727;
+
+
+                    .data {
+                        display: none;
+
+                        &.active {
+
+                            display: block !important;
+                        }
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 1rem 6rem;
+
+
+                        li {
+                            padding: .3rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
